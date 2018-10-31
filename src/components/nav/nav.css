@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.nav-body {
+    width: 100%;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+	position: fixed;
+	color: white;
+	/* background: rgba(0,0,0,0.09); */
+}
+
+nav {
+	--ease: all 600ms ease;
+	transition: var(--ease);
+	height: 11%;
+}
+
+nav.fade-in {
+	background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) );
+  	height: 13%;
+}
+
+.nav-body>h3 {
+	font-size: 30px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.nav-body>h3:hover {
+	cursor: pointer;
+}
+
+.nav-link::after{
+	left:0;
+	bottom: 0;
+	transition-duration: 0.4s;
+  }
+  .nav-link span::after{
+	right:0;
+	top: 0;
+	transition-duration: 0.4s;
+  }
+  .nav-link::before{
+	right: 0;
+	top: 0;
+	transition-duration: 0.4s;
+  }
+  .nav-link span::before{
+	left: 0;
+	bottom: 0;
+	transition-duration: 0.4s;
+  }
+
+  button{
+	font-size: 30px;
+	font-family: 'Montserrat', sans-serif;
+	display: inline-block;
+	position: relative;
+	background: none;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	margin: 20px 30px;
+  }
+  span{
+	display: block;
+	padding: 25px 80px;
+  }
+  button::before, button::after{
+	content:"";
+	width: 0;
+	height: 2px;
+	position: absolute;
+	transition: all 0.2s linear;
+	background: #fff;
+  }
+  
+  span::before, span::after{
+	content:"";
+	width:2px;
+	height:0;
+	position: absolute;
+	transition: all 0.2s linear;
+	background: #fff;
+  }
+  button:hover::before, button:hover::after{
+	width: 100%;
+  }
+  button:hover span::before, button:hover span::after{
+	height: 100%;
+  }

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import home from './components/home/home';
+import Home from './components/home/home';
+import Cabinets from './components/cabinets/cabinets'
 
 export default (
-    <Switch>
-        <Route component = {home} exact path= '/'/>
-
-    </Switch>
+        <Switch>
+            <Route component = {Home} exact path= '/' />
+            <Route component = {Cabinets} path= '/cabinets' />
+        </Switch>
 )
